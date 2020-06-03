@@ -70,7 +70,9 @@ const Input = styled.input.attrs(props => ({
   font-size: 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
- 
+  npm install gh-pages --save-dev
+
+
 
   /* here we use the dynamically computed prop */
   margin: ${props => props.size};
