@@ -3,19 +3,19 @@ import styled, { keyframes } from 'styled-components'
 import './App.css';
 const breatheAnimation = keyframes`
  0% { height: 100px; width: 100px; }
- 30% { height: 400px; width: 400px; opacity: 1 }
- 40% { height: 405px; width: 405px; opacity: 0.3; }
- 100% { height: 100px; width: 100px; opacity: 0.6; }
+ 30% { height: 100px; width: 100px; opacity: 1 }
+ 40% { height: 205px; width: 205px; opacity: 1; }
+ 100% { height: 100px; width: 100px; opacity: 1; }
 `
 const Circle = styled.div`
- height: 100px;
- width: 100px;
+ height: 10%;
+ width: 10%;
  border-style: solid;
  border-width: 5px;
  border-radius: 50%;
  border-color: black;
  animation-name: ${breatheAnimation};
- animation-duration: 8s;
+ animation-duration: 1s;
  animation-iteration-count: infinite;
 `
 const Container = styled.div`
@@ -52,6 +52,7 @@ const Input = styled.input.attrs(props => ({
   font-size: 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
+ 
 
   /* here we use the dynamically computed prop */
   margin: ${props => props.size};
@@ -61,12 +62,13 @@ function App() {
   return (
     <div>
       <Container>
-   <Circle />
-  </Container>
-      <Input></Input>
       <h1>Styled Components Test</h1>
       
       <Button>I am a Button</Button>
+   <Circle />
+  </Container>
+      <Input></Input>
+  
     </div>
   );
 }
