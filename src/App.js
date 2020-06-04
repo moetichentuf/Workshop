@@ -14,24 +14,28 @@ const rotate = keyframes`
 // Here we create a component that will rotate everything we pass in over two seconds
 const Rotate = styled.div`
   display: inline-block;
-  animation: ${rotate} 8s linear infinite;
+  animation: ${rotate} 4s linear infinite;
   padding: 2rem 1rem;
-  font-size: 1.2rem;
+  font-size: 6rem;
 `;
 
 const breatheAnimation = keyframes`
  0% { height: 100px; width: 100px; }
  30% { height: 100px; width: 100px; opacity: 1 }
- 40% { height: 205px; width: 205px; opacity: 1; }
+ 40% { height: 160px; width: 160px; opacity: 1; }
  100% { height: 100px; width: 100px; opacity: 1; }
 `
 const Circle = styled.div`
+z-index:-1;
+top:25%;
+position:absolute;
  height: 10%;
  width: 10%;
  border-style: solid;
- border-width: 5px;
+ border-width: 2px;
  border-radius: 50%;
- border-color: black;
+ background-color:blue;
+ border-color: blue;
  animation-name: ${breatheAnimation};
  animation-duration: 1s;
  animation-iteration-count: infinite;
@@ -41,21 +45,21 @@ const Container = styled.div`
  align-items: center;
  justify-content: center;
  flex-direction: column;
- height: 450px;
+ height: 300px;
 `
 const Button = styled.button`
   cursor: pointer;
   background: transparent;
   font-size: 16px;
   border-radius: 3px;
-  color: palevioletred;
-  border: 2px solid palevioletred;
+  color: blue;
+  border: 2px solid blue;
   margin: 0 1em;
   padding: 0.25em 1em;
   transition: 0.5s all ease-out;
  
   &:hover {
-    background-color: palevioletred;
+    background-color: blue;
     color: white;
   }
 `;
@@ -66,11 +70,10 @@ const Input = styled.input.attrs(props => ({
   // or we can define dynamic ones
   size: props.size || "1em",
 }))`
-  color: palevioletred;
+  color: blue;
   font-size: 1em;
-  border: 2px solid palevioletred;
+  border: 2px solid blue;
   border-radius: 3px;
-  npm install gh-pages --save-dev
 
 
 
