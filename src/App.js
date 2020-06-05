@@ -11,16 +11,16 @@ const move = keyframes`
     transform: scale(2);
   }
   to {
-    transform: scale(2.5);
+    transform: scale(2.2);
   }
 `;
 // Here we create a component that will rotate everything we pass in over two seconds
 const Move = styled.div`
   display: inline-block;
-  animation: ${move} 1s ease infinite;
+  animation: ${move} 1s ease-out infinite;
   padding: 2rem 1rem;
   size:1%;
-  margin-top:10%;
+  margin-top:20%;
 `;
 
 
@@ -34,7 +34,7 @@ const Container = styled.div`
 const Button = styled.button`
   cursor: pointer;
   background: transparent;
-  font-size: 16px;
+  font-size: 5vh;
   border-radius: 3px;
   color: black;
   border: 2px solid black;
@@ -51,12 +51,11 @@ const Button = styled.button`
 function App() {
   return (
     <div>
-      <Move><img style={{width:'10%'}}  src={heart} alt={heart} /> </Move>
+      <Move><img style={{width:'15%'}}  src={heart} alt={heart} /> </Move>
       <Container>
-      <h1>Styled Components Test</h1>
-      
-      <Button>Start Heart</Button>
-   
+    
+      <Button >Start Heart</Button>
+ 
   </Container>
       
   
